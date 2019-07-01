@@ -49,9 +49,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 WORKDIR /var/www/html
 
-COPY . /var/www/html
+ADD . /var/www/html
 
-RUN php artisan serve --port=80 --host=0.0.0.0
+CMD php artisan serve --port=80 --host=0.0.0.0
 
 EXPOSE 80
 
